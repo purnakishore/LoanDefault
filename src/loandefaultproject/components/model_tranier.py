@@ -52,8 +52,11 @@ class ModelTrainer:
         # confusion_matrix(y_test,y_pred)
 
         # print(classification_report(y_test,y_pred))
+
+        import dagshub
+        dagshub.init(repo_owner='purnakishore', repo_name='LoanDefault', mlflow=True)
         
-        mlflow.set_registry_uri("https://dagshub.com/krishnaik06/mlprojecthindi.mlflow")
+        mlflow.set_registry_uri("https://dagshub.com/purnakishore/LoanDefault.mlflow")
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
         with mlflow.start_run():
