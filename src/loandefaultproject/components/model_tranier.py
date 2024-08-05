@@ -49,6 +49,8 @@ class ModelTrainer:
         accuracy = accuracy_score(y_test,y_pred)
         f1_score = f1_score(y_test,y_pred)
 
+        print(accuracy,f1_score)
+
         # confusion_matrix(y_test,y_pred)
 
         # print(classification_report(y_test,y_pred))
